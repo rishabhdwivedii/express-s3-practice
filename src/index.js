@@ -1,9 +1,10 @@
 const express = require("express");
+const path = require("path");
 
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("hello friendo!");
+  res.sendFile(path.join(__dirname, "..", "videos", "coke.mp4"));
 });
 
 const port = process.env.PORT || 3000;
